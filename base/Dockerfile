@@ -19,7 +19,7 @@ COPY cert/cert.pem /usr/local/share/ca-certificates/eoelab.org.crt
 
 RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources && \
     apt-get update --yes && apt-get upgrade --yes && \
-    apt-get install --yes --no-install-recommends zsh ca-certificates gnupg2 locales wget curl git git-lfs vim bzip2 zip unzip xclip p7zip-full && \
+    apt-get install --yes --no-install-recommends ca-certificates locales wget curl nano-tiny git bzip2 zip && \
     update-ca-certificates && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     echo "zh_CN.UTF-8 UTF-8">/etc/locale.gen && locale-gen 

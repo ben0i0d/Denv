@@ -20,5 +20,5 @@ COPY cert/cert.pem /usr/local/share/ca-certificates/eoelab.org.crt
 RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources && \
     apt-get update --yes && apt-get install --yes --no-install-recommends locales curl nano-tiny git bzip2 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    echo "zh_CN.UTF-8 UTF-8">/etc/locale.gen && locale-gen
+    sed -i -e 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
 

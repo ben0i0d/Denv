@@ -12,6 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Base image
-      run: cd base
-      run: docker build . --file Dockerfile --tag ben0i0d/denv:base
-      run: docker push ben0i0d/denv:base
+      run: cd base && docker build . --file Dockerfile --tag ben0i0d/denv:base && docker push ben0i0d/denv:base

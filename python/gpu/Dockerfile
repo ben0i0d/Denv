@@ -1,4 +1,4 @@
-FROM eoelab.org:1032/mirrored-sources/mirrored-sources/debian:trixie
+FROM debian:trixie
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

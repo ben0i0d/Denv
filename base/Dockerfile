@@ -22,3 +22,4 @@ RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debi
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     sed -i -e 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
 
+WORKDIR "${HOME}"

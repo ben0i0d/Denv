@@ -1,7 +1,5 @@
 FROM ben0i0d/denv:base
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
 USER root
 
 # Copy files

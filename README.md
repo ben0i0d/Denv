@@ -1,22 +1,25 @@
 # Denv
-This is a project for creating development containers. 
+English | [中文](README_CN.md)
 
-The outcome of this project is containers used for a unified development environment. 
+**THIS doc for non-CN USER**
 
-In practice, this project has been separated from another Jupyter project to better align with the requirements of devcontainers in VScode. 
+**dockerhub: https://hub.docker.com/r/ben0i0d/denv**
+## 项目梗概
+This is a project extracted from the Jupyter project to create a development container. Its build produces a container for a unified development environment, retaining only the essential toolchain required for development.
 
-It has removed IDE components, including Jupyter Notebook, leaving only the essential toolchain for development. 
+In the future, we are considering creating an Renv project based on this one to provide a lighter-weight runtime environment.
 
-In the future, we are considering creating an Renv project based on this project to provide a lighter runtime environment.
+## 项目上游
+https://github.com/ben0i0d/jupyter-image-stacks
 
-# HOW TO USE
+## HOW TO USE
 
-## Use like a container
+### Use like a container
 you can just `docker run -it`
 
-## Use like a devcontainer(VScode)
+### Use like a devcontainer(VScode)
 `cp -r .devcontainer WORKSOLDIR`
 
-# NOTICE
+## NOTICE
 
 Maybe I will change some image's name rapidly

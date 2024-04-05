@@ -2,6 +2,9 @@ FROM ben0i0d/denv:base
 
 USER root
 
+ENV CONDA_DIR=/opt/conda \
+    PATH="/opt/conda/bin:${PATH}"
+
 # Copy files
 COPY conf/initial-condarc "${CONDA_DIR}/.condarc"
 

@@ -6,12 +6,10 @@ USER root
 
 # Configure environment
 ENV DEBIAN_FRONTEND=noninteractive \
-    CONDA_DIR=/opt/conda \
     SHELL=/bin/bash \
     LANG=zh_CN.UTF-8 \
     LANGUAGE=zh_CN.UTF-8 \
     LC_ALL=zh_CN.UTF-8 \
-    PATH="/opt/conda/bin:${PATH}" \
     HOME="/root" 
 
 # Copy files

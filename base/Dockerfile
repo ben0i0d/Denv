@@ -1,4 +1,4 @@
-FROM debian:trixie
+FROM debian:trixie-slim
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

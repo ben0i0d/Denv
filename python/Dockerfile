@@ -2,20 +2,12 @@ FROM ben0i0d/denv:base
 
 USER root
 
-ENV CONDA_DIR=/opt/conda \
-    PATH="/opt/conda/bin:${PATH}"
+ENV PATH="/opt/base/bin:${PATH}"
 
-# Copy files
-COPY conf/initial-condarc "${CONDA_DIR}/.condarc"
+COPY conf/pip.conf /etc/pip.conf
 
-WORKDIR /tmp
-# install python mamba
-RUN mkdir -p "${CONDA_DIR}" && \
-    wget -qO /tmp/micromamba.tar.bz2 "https://micromamba.snakepit.net/api/micromamba/linux-64/latest" && \
-    tar -xvjf /tmp/micromamba.tar.bz2 --strip-components=1 bin/micromamba && rm /tmp/micromamba.tar.bz2 && \
-    ./micromamba install --root-prefix="${CONDA_DIR}" --prefix="${CONDA_DIR}" --yes 'mamba' 'python=3.12' && \
-    rm micromamba && \
-    mamba clean --all && pip cache purge && \
-    pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple 
+# install python 
+RUN apt-get update --yes && apt-get install --yes --no-install-recommends python3-pip python3-venv && apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    python3 -m venv /opt/base 
 
 WORKDIR "${HOME}"

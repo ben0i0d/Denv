@@ -18,7 +18,7 @@ https://github.com/ben0i0d/jupyter-image-stacks
 运行`docker run -it`
 
 ### devcontainer(VScode)
-执行`cp -r .devcontainer WORKSOLDIR`
+执行`cp -r .devcontainer WORKDIR`
 
 ## 注意
-镜像的名字可能会经常改
+1. python 版本锁定 3.11 (我们移除了 mamba，因为我们认为它不必要)

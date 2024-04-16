@@ -22,3 +22,12 @@ https://github.com/ben0i0d/jupyter-image-stacks
 
 ## 注意
 1. python 版本锁定 3.11 (我们移除了 mamba，因为我们认为它不必要)
+2. quarto 只包括 Quarto,Python，用来渲染ipynb
+## 镜像依赖关系
+```mermaid
+graph LR
+Base-->PROGRAM{PROGRAMLANG}
+PROGRAM-->PA(Cpp)
+PROGRAM-->PB(Julia)
+PROGRAM-->PC(Python)-->PCA(Quarto)
+```

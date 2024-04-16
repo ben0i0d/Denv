@@ -21,5 +21,14 @@ you can just `docker run -it`
 `cp -r .devcontainer WORKSDIR`
 
 ## NOTICE
-
 1. python version hook on 3.11 (we remove mamba，because we think it is not necessary)
+2. quarto only contain Quarto,Python,just used to render ipynb
+
+## Image dependencies
+```mermaid
+graph LR
+Base-->PROGRAM{PROGRAMLANG}
+PROGRAM-->PA(Cpp)
+PROGRAM-->PB(Julia)
+PROGRAM-->PC(Python)-->PCA(Quarto)
+```

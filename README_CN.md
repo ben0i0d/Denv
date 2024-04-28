@@ -15,7 +15,7 @@ https://github.com/ben0i0d/jupyter-image-stacks
 ## 如何使用
 
 ### 普通容器
-运行`docker run -it`
+运行`podman run -it`
 
 ### devcontainer(VScode)
 执行`cp -r .devcontainer WORKDIR`

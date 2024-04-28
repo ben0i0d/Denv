@@ -15,7 +15,7 @@ https://github.com/ben0i0d/jupyter-image-stacks
 ## HOW TO USE
 
 ### Use like a container
-you can just `docker run -it`
+you can just `podman run -it`
 
 ### Use like a devcontainer(VScode)
 `cp -r .devcontainer WORKSDIR`

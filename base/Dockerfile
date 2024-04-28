@@ -1,7 +1,5 @@
 FROM debian:trixie-slim
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
 USER root
 
 # Configure environment
